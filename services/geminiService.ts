@@ -1,7 +1,7 @@
 import { GoogleGenAI, Modality, Type } from "@google/genai";
 import { Broadcast, BroadcastMode } from "../types.ts";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 export const generateBroadcastData = async (
   prompt: string, 
